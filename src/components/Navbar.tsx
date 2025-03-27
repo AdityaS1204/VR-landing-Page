@@ -3,6 +3,11 @@ import { Menu, X } from 'lucide-react'
 import { useState } from "react";
 import { navItems } from '../constants/index.jsx'
 
+interface navItem {
+    href: string;
+    label: string;
+}
+
 
 const Navbar = () => {
     const [mobileDrawerOpen, setMobileDrawerOpen] = useState(false)
@@ -21,7 +26,7 @@ const Navbar = () => {
 
                     </div>
                     <ul className="hidden lg:flex space-x-12 ml-14">
-                        {navItems.map((item, index) => (
+                        {navItems.map((item: navItem, index: number) => (
                             <li key={index}>
                                 <a href={item.href}>{item.label}</a>
                             </li>
@@ -44,20 +49,20 @@ const Navbar = () => {
                 {mobileDrawerOpen && (
                     <div className="fixed right-0 flex items-center justify-center w-full lg:hidden flex-col p-12 z-20 bg-neutral-900">
                         <ul>
-                            {navItems.map((item,index) => (
+                            {navItems.map((item:navItem, index:number) => (
                                 <li key={index} className="py-4">
                                     <a href={item.href}>{item.label}</a>
                                 </li>
                             ))}
                         </ul>
                         <div className="flex space-x-6">
-                        <a href="#" className="py-2 px-3 rounded-lg border">
-                            Sign In
-                        </a>
-                        <a href="#" className="py-2 px-3 rounded-lg border bg-gradient-to-r from-orange-500 to-orange-800">
-                            Create Account
-                        </a>
-                    </div>
+                            <a href="#" className="py-2 px-3 rounded-lg border">
+                                Sign In
+                            </a>
+                            <a href="#" className="py-2 px-3 rounded-lg border bg-gradient-to-r from-orange-500 to-orange-800">
+                                Create Account
+                            </a>
+                        </div>
                     </div>
                 )}
             </div>
