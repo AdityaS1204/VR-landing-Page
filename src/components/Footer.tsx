@@ -1,4 +1,4 @@
-import { resourcesLinks, communityLinks, platformLinks } from '../constants/index.tsx'
+import { resourcesLinks, communityLinks, platformLinks } from '../constants/index'
 
  interface platformLink {
     href: string;
