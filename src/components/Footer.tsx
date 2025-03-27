@@ -1,6 +1,17 @@
-import { resourcesLinks, communityLinks, platformLinks } from '../constants/index.jsx'
+import { resourcesLinks, communityLinks, platformLinks } from '../constants/index.tsx'
 
-
+ interface platformLink {
+    href: string;
+    text: string;
+  }
+ interface communityLink {
+    href: string;
+    text: string;
+  }
+ interface resourcesLink {
+    href: string;
+    text: string;
+  }
 
 const Footer = () => {
     return (
@@ -11,7 +22,7 @@ const Footer = () => {
                         Resources
                     </h3>
                     <ul>
-                        {resourcesLinks.map((link, index) => (
+                        {resourcesLinks.map((link:resourcesLink, index:number) => (
                             <li key={index}><a href={link.href} className='text-neutral-500 hover:text-white'>{link.text}</a></li>
                         ))}
                     </ul>
@@ -21,7 +32,7 @@ const Footer = () => {
                         Platforms
                     </h3>
                     <ul>
-                        {platformLinks.map((link, index) => (
+                        {platformLinks.map((link:platformLink, index:number) => (
                             <li key={index}><a href={link.href} className='text-neutral-500 hover:text-white'>{link.text}</a></li>
                         ))}
                     </ul>
@@ -31,7 +42,7 @@ const Footer = () => {
                         Communities
                     </h3>
                     <ul>
-                        {communityLinks.map((link, index) => (
+                        {communityLinks.map((link:communityLink, index:number) => (
                             <li key={index}><a href={link.href} className='text-neutral-500 hover:text-white'>{link.text}</a></li>
                         ))}
                     </ul>

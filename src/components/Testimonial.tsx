@@ -1,4 +1,4 @@
-import { testimonials } from '../constants/index.jsx'
+import { testimonials } from '../constants/index.tsx'
 
 interface testimonial {
     user: string;

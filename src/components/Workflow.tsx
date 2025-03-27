@@ -1,6 +1,6 @@
 import codeImg from "../assets/code.jpg"
 import { CheckCircle2 } from 'lucide-react'
-import { checklistItems } from '../constants/index.jsx'
+import { checklistItems } from '../constants/index.tsx'
 
 interface checklistItem {
     title: string;

@@ -1,4 +1,4 @@
-import { features } from '../constants/index.jsx'
+import { features } from '../constants/index.tsx'
 import { } from 'lucide-react'
 
 interface feature {

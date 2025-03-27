@@ -1,7 +1,7 @@
 import logo from "../assets/logo.png";
 import { Menu, X } from 'lucide-react'
 import { useState } from "react";
-import { navItems } from '../constants/index.jsx'
+import { navItems } from '../constants/index'
 
 interface navItem {
     href: string;
